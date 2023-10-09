@@ -1,0 +1,1 @@
+Example from https://github.com/paritytech/ink-examples/tree/main/erc20
