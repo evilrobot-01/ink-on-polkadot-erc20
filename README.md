@@ -1,29 +1,46 @@
 # ink! on Polkadot: ERC-20
 An example ERC-20 template using the [ink!](https://use.ink/) smart contract programming language.
 
+## Overview
+todo
+
+## Project Structure
+todo
+
 ## Prerequisites
-- Rust & Cargo, using the [Rust installation guide](https://doc.rust-lang.org/cargo/getting-started/installation.html):
-  ```shell
-  curl https://sh.rustup.rs -sSf | sh
-  ```
-  > Note: Rust `1.70` or later is required.
-- ink! CLI, using the `cargo-contract` [installation guide](https://github.com/paritytech/cargo-contract#installation):
-  ```shell
-  rustup component add rust-src
-  cargo install --force --locked cargo-contract@4.0.0-alpha
-  ```
-  > Note: This alpha version introduces verifiable builds and will require Docker.
-- `substrate-contracts-node`, a simple [Substrate](https://github.com/paritytech/polkadot-sdk#polkadot-sdk) blockchain 
-  with smart contract functionality via the `contracts` module, downloaded from 
-  https://github.com/paritytech/substrate-contracts-node/releases. It is assumed that the binary is available in the 
-  root of the project folder.
+
+### Rust
+
+Install Rust & Cargo, using the [Rust installation guide](https://doc.rust-lang.org/cargo/getting-started/installation.html):
+```shell
+curl https://sh.rustup.rs -sSf | sh
+```
+> Note: Rust `1.70` or later is required.
+
+### ink!
+
+Install the ink! CLI, using the `cargo-contract` [installation guide](https://github.com/paritytech/cargo-contract#installation):
+```shell
+rustup component add rust-src
+cargo install --force --locked cargo-contract@4.0.0-alpha
+```
+> Note: This alpha version introduces verifiable builds and will require Docker.
+
+### Substrate Node
+
+Install `substrate-contracts-node`, a simple [Substrate](https://github.com/paritytech/polkadot-sdk#polkadot-sdk) blockchain 
+with smart contract functionality via the `contracts` module, downloaded from 
+https://github.com/paritytech/substrate-contracts-node/releases. It is assumed that the binary is available in the 
+root of the project folder.
   >  Note: this currently requires a custom build from the 
   > https://github.com/paritytech/substrate-contracts-node/tree/frank/feat-delayed-finalize branch until PR accepted and 
   > release made available.
-- [pnpm](https://pnpm.io/installation#using-a-standalone-script) package manager
 
-## Testing
-Steps on running unit, integration and end-to-end tests can be found at [tests](./tests).
+### PNpM
+Install the [pnpm](https://pnpm.io/installation#using-a-standalone-script) package manager.
+
+## Commands
+todo
 
 ## Contract Compilation
 Build the contract with the `verifiable` option, generating the contract metadata and bundling into a .contract file.
@@ -52,6 +69,9 @@ cargo contract build --verifiable --manifest-path=contracts/Cargo.toml
 - **Deploy contract instance**: open the frontend in a browser
   - click **Deploy**
   - sign the transaction when prompted
+
+## Testing
+Steps on running unit, integration and end-to-end tests can be found at [tests](./tests).
 
 ## Deployment
 - TODO: deploy contract to a testnet
