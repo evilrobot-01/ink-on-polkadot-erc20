@@ -1,7 +1,7 @@
 {
-  "name": "ink-examples",
+  "name": "ink-on-polkadot-erc20",
   "version": "1.0.0",
-  "description": "Example dApps for ink! contracts.",
+  "description": "An example ERC-20 template using the ink! smart contract programming language.",
   "main": "index.js",
   "keywords": [],
   "author": "Sam Ruberti <sam.ruberti@parity.io>",
