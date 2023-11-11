@@ -1,9 +1,10 @@
 # ink! on Polkadot: ERC-20
-An example ERC-20 template using the [ink!](https://use.ink/) smart contract programming language.
+An example ERC-20 dApp using the [ink!](https://use.ink/) smart contract programming language.
 
-## Overview
+##  👁️ Overview
 ink! is an eDSL to write smart contracts in Rust for blockchains built on Substrate.
-Substrate is the primary blockchain SDK used by developers to create the [parachains](https://wiki.polkadot.network/docs/learn-parachains-index) that make up the Polkadot network.
+Substrate is the primary blockchain SDK used by developers to create the 
+[parachains](https://wiki.polkadot.network/docs/learn-parachains-index) that make up the Polkadot network.
 ink! contracts are compiled to WebAssembly.
 
 ## 🚀 Project Structure
@@ -23,7 +24,7 @@ This project is composed of the following directories and files:
 The [contracts/lib.rs](./contracts/lib.rs) file contains the smart contract and associated tests. The [frontend](./frontend)
 directory contains the frontend source code, which makes use of the useink UI components located within the [ui](./ui) directory.
 
-## Prerequisites
+## 🏗️ Prerequisites
 
 ### Rust
 
@@ -46,11 +47,10 @@ cargo install --force --locked cargo-contract@4.0.0-alpha
 
 Install `substrate-contracts-node`, a simple [Substrate](https://github.com/paritytech/polkadot-sdk#polkadot-sdk) blockchain 
 with smart contract functionality via the `contracts` module, downloaded from 
-https://github.com/paritytech/substrate-contracts-node/releases. It is assumed that the binary is available in the 
-root of the project folder.
+https://github.com/paritytech/substrate-contracts-node/releases. 
   >  Note: this currently requires a custom build from the 
   > https://github.com/paritytech/substrate-contracts-node/tree/frank/feat-delayed-finalize branch until PR accepted and 
-  > release made available.
+  > release made available. It is assumed that the binary is available in the root of the project folder.
 
 ### PNpM
 Install the [pnpm](https://pnpm.io/installation#using-a-standalone-script) package manager.
@@ -59,21 +59,29 @@ Install the [pnpm](https://pnpm.io/installation#using-a-standalone-script) packa
 
 All commands are run from the root of the project, from a terminal:
 
-todo: complete commands
+| Command                  | Action                                                                                                     |
+|:-------------------------|:-----------------------------------------------------------------------------------------------------------|
+| `pnpm install`           | Installs front end/ui dependencies.                                                                        |
+| `pnpm contract:build`    | Builds the contract, generating the contract metadata and bundling into a `.contract` file.                |
+| `pnpm contract:upload`   | Uploads the contract code to the local development chain.                                                  |
+| `pnpm contract:test`     | Runs all contract unit/integration tests.                                                                  |
+| `pnpm contract:e2e-test` | Runs all contract end-to-end tests.                                                                        |
+| `pnpm contract:clean`    | Removes any previously generated contract artifacts.                                                       |
+| `pnpm node:start`        | Starts a local development chain.                                                                          |
+| `pnpm dev`               | Builds contract, launches `substrate-contracts-node`, uploads the contract and then launches the frontend. |
 
-| Command        | Action                             |
-|:---------------|:-----------------------------------|
-| `pnpm install` | Installs frontend/ui dependencies. |
-
-## Contract Compilation
-Build the contract with the `verifiable` option, generating the contract metadata and bundling into a .contract file.
-```shell
-cargo contract build --verifiable --manifest-path=contracts/Cargo.toml
-```
-> Note: `--manifest-path` simply specifies the relative path to the contracts manifest file.
+> The above scripts simplify the commands required. You can check the underlying commands they trigger in package.json
 
 ## 🚀 Launching
 
+- Install dependencies:
+  ```shell
+  pnpm install
+  ```
+- **Build** the contract: Docker must be running in order to generate a verifiable build.
+  ```shell
+  pnpm build:contract
+  ```
 - **Run** `substrate-contracts-node`: run a local development chain
   ```shell
   ./substrate-contracts-node
