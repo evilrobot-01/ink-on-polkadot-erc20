@@ -2,10 +2,26 @@
 An example ERC-20 template using the [ink!](https://use.ink/) smart contract programming language.
 
 ## Overview
-todo
+ink! is an eDSL to write smart contracts in Rust for blockchains built on Substrate.
+Substrate is the primary blockchain SDK used by developers to create the [parachains](https://wiki.polkadot.network/docs/learn-parachains-index) that make up the Polkadot network.
+ink! contracts are compiled to WebAssembly.
 
-## Project Structure
-todo
+## 🚀 Project Structure
+This project is composed of the following directories and files:
+
+```
+/
+├── contracts/
+│   └── lib.rs
+├── frontend
+├── tests/
+│   └── README.md
+├── ui
+├── README.md
+└── package.json
+```
+The [contracts/lib.rs](./contracts/lib.rs) file contains the smart contract and associated tests. The [frontend](./frontend)
+directory contains the frontend source code, which makes use of the useink UI components located within the [ui](./ui) directory.
 
 ## Prerequisites
 
@@ -39,8 +55,15 @@ root of the project folder.
 ### PNpM
 Install the [pnpm](https://pnpm.io/installation#using-a-standalone-script) package manager.
 
-## Commands
-todo
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+todo: complete commands
+
+| Command        | Action                             |
+|:---------------|:-----------------------------------|
+| `pnpm install` | Installs frontend/ui dependencies. |
 
 ## Contract Compilation
 Build the contract with the `verifiable` option, generating the contract metadata and bundling into a .contract file.
@@ -49,7 +72,7 @@ cargo contract build --verifiable --manifest-path=contracts/Cargo.toml
 ```
 > Note: `--manifest-path` simply specifies the relative path to the contracts manifest file.
 
-## Launching
+## 🚀 Launching
 
 - **Run** `substrate-contracts-node`: run a local development chain
   ```shell
@@ -70,17 +93,19 @@ cargo contract build --verifiable --manifest-path=contracts/Cargo.toml
   - click **Deploy**
   - sign the transaction when prompted
 
-## Testing
+## 🧪 Testing
 Steps on running unit, integration and end-to-end tests can be found at [tests](./tests).
 
-## Deployment
+## ⚡ Deployment
 - TODO: deploy contract to a testnet
 - TODO: deploy to fleek
 
-## More Information
-- ink!: https://use.ink/ and https://github.com/paritytech/ink
-- Substrate: https://substrate.io/ and https://github.com/paritytech/polkadot-sdk/tree/master/substrate
-- Polkadot: https://wiki.polkadot.network/ and https://github.com/paritytech/polkadot-sdk
+## 👀 More Information
+- ink!: https://use.ink, https://github.com/paritytech/ink and https://github.com/paritytech/ink-examples.
+- Substrate: https://substrate.io and https://github.com/paritytech/polkadot-sdk/tree/master/substrate.
+- Polkadot: https://wiki.polkadot.network and https://github.com/paritytech/polkadot-sdk.
 
-## License
-TODO
+## 🪪 License
+This sample is released into the public domain. We hope they help you build something great with ink!.
+
+See the LICENSE file in this folder for more details.
