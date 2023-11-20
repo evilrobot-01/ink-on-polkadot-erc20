@@ -55,13 +55,12 @@ https://github.com/paritytech/substrate-contracts-node/releases.
 ### PNpM
 Install the [pnpm](https://pnpm.io/installation#using-a-standalone-script) package manager.
 
-### Wallet
+### Polkadot Wallet
 Select and install a wallet from https://wiki.polkadot.network/docs/wallets-and-extensions#browser-extensions.
-Import the default Substrate accounts (e.g. //Alice, //Bob, //Charlie etc.) derived from the following dev seed phrase:
+Import the default Substrate accounts (e.g. `//Alice`, `//Bob`, `//Charlie` etc.) derived from the 
+[dev seed phrase]((https://github.com/paritytech/polkadot-sdk/blob/0c5dcca9e3cef6b2f456fccefd9f6c5e43444053/substrate/primitives/core/src/crypto.rs#L47)):
 
 ```bottom drive obey lake curtain smoke basket hold race lonely fit walk```
-
-[Source](https://github.com/paritytech/polkadot-sdk/blob/0c5dcca9e3cef6b2f456fccefd9f6c5e43444053/substrate/primitives/core/src/crypto.rs#L47)
 
 ## 🧞 Commands
 
@@ -96,12 +95,18 @@ pnpm dev
 > Note: Docker must be running in order to generate a verifiable build.
 
 ### Deploy
-An instance of the contract can then be deployed by opening the frontend in a browser, clicking **Deploy** and signing 
-the transaction when prompted. A contract's code is uploaded once and can then have multiple instances, minimizing on-chain 
+An _instance_ of the contract can then be deployed by opening the frontend in a browser, clicking **Deploy** and signing 
+the transaction when prompted. 
+
+> A contract's code is uploaded once and can then have multiple instances, minimizing on-chain 
 storage requirements. More information can be found at https://use.ink/getting-started/deploy-your-contract.
 
-> Note: the address of the deployed contract is stored within the browser's local storage, under the `erc20-address` key. 
+You should now be able to interact with the contract using the options available under the **Read** and **Write** tabs.
+More information can be found by inspecting the contract at [contracts/lib.rs](./contracts/lib.rs).
+
+> Note: the address of the deployed contract is stored within the browser's local storage, under the `erc20-address` key.
 > You may need to manually remove this key should you relaunch the node.
+
 
 ## 🧪 Testing
 Steps on running unit, integration and end-to-end tests can be found at [tests](./tests).
