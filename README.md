@@ -112,8 +112,48 @@ More information can be found by inspecting the contract at [contracts/lib.rs](.
 Steps on running unit, integration and end-to-end tests can be found at [tests](./tests).
 
 ## ⚡ Deployment
-- TODO: deploy contract to a testnet
-- TODO: deploy to fleek
+
+### Deploy to Testnet
+- TODO: 
+  - deploy contract to a testnet
+  - update code to use testnet
+
+### Deploy to Fleek
+
+#### 1. Create a `fleek.json` config file:
+You can configure this site deployment using [Fleek CLI]() and running:
+```shell
+ > fleek sites init
+  WARN! Fleek CLI is in beta phase, use it under your own responsibility
+  ? Choose one of the existing sites or create a new one. › 
+  ❯ Create a new site
+```
+It will prompt you for a `name`, `dist` directory location & `build command`
+
+- `name`: How you want to name the site
+- `dist`: The output directory where the site is located, for this template it's `dist`
+- `build command`: Command to build your site, this will be used to deploy the latest version either by CLI or Github Actions
+
+#### 2. Deploy the site
+After configuiring your `fleek.json` file, you can deployt the site by running
+
+```shell
+fleek sites deploy
+```
+After running it you will get an output like this:
+```
+ WARN! Fleek CLI is in beta, use it at your own discretion
+  > Success! Deployed!
+  > Site IPFS CID: QmP1nDyoHqSrRabwUSrxRV3DJqiKH7b9t1tpLcr1NTkm1M
+
+  > You can visit through the gateway:
+  > https://ipfs.io/ipfs/QmP1nDyoHqSrRabwUSrxRV3DJqiKH7b9t1tpLcr1NTkm1M
+```
+
+#### Extra features
+- **Continuous Integration (CI):** `fleek sites ci` [Documentation.](https://docs.fleek.xyz/services/sites/#continuous-integration-ci)
+- **Adding custom domains:** `fleek domains create` [Documentation.](https://docs.fleek.xyz/services/domains/)
+
 
 ## 👀 More Information
 - ink!: https://use.ink, https://github.com/paritytech/ink and https://github.com/paritytech/ink-examples.
