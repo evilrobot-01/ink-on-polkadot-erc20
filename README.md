@@ -87,8 +87,8 @@ pnpm install
 ```
 
 ### Launch
-Builds the contract, launches a local development chain using `substrate-contracts-node`, uploads the contract 
-and then launches the frontend:
+Build the contract, launch a local development chain using `substrate-contracts-node`, upload the contract 
+and then launch the frontend by using the following command:
 ```shell
 pnpm dev
 ```
@@ -114,9 +114,18 @@ Steps on running unit, integration and end-to-end tests can be found at [tests](
 ## ⚡ Deployment
 
 ### Deploy to Testnet
-- TODO: 
-  - deploy contract to a testnet
-  - update code to use testnet
+The contract's code has already been uploaded to the Contracts parachain on the Rococo testnet. You can therefore 
+easily deploy your own instance through the frontend after simply reconfiguring it to use the `RococoContractsTestnet` chain.
+
+Update [frontend/src/main.tsx](./frontend/src/main.tsx) by removing the `SubstrateContractsNode` chain from the `chains` 
+configuration. Launch the frontend connecting to the testnet with the following command:
+
+```shell
+pnpm testnet:dev
+```
+
+See https://use.ink/testnet for more information on the testnet and how to get tokens for the Contracts parachain.
+> Note: it will take a little longer for your deployment transaction to be included in a block and finalized on the testnet.
 
 ### Deploy to Fleek
 
@@ -156,7 +165,8 @@ After running it you will get an output like this:
 
 
 ## 👀 More Information
-- ink!: https://use.ink, https://github.com/paritytech/ink and https://github.com/paritytech/ink-examples.
+- ink!: https://use.ink, https://github.com/paritytech/ink, https://github.com/paritytech/ink-examples and 
+  https://contracts-ui.substrate.io.
 - Substrate: https://substrate.io and https://github.com/paritytech/polkadot-sdk/tree/master/substrate.
 - Polkadot: https://wiki.polkadot.network and https://github.com/paritytech/polkadot-sdk.
 

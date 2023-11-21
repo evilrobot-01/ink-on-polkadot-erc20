@@ -18,7 +18,8 @@
     "build:ui": "pnpm --filter ui build",
     "frontend:dev": "pnpm --filter ui dev & pnpm --filter erc20 dev",
     "node:start": "./substrate-contracts-node --finalize-delay-sec 1",
-    "dev": "pnpm run contract:build && concurrently 'pnpm run node:start' 'pnpm run contract:upload && pnpm run frontend:dev'"
+    "dev": "pnpm run contract:build && concurrently 'pnpm run node:start' 'pnpm run contract:upload && pnpm run frontend:dev'",
+    "testnet:dev": "pnpm run frontend:dev"
   },
   "packages": [
     "ui",
