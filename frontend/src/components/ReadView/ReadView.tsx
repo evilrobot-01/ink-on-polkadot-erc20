@@ -43,6 +43,7 @@ export const ReadView: React.FC<Props> = ({ erc20, style }) => {
 
   return (
     <div className='mt-6' style={style}>
+      {/* Total Supply */}
       <h2 className='text-sm uppercase'>
         Total Supply:{' '}
         {totalSupplyResult
@@ -54,6 +55,7 @@ export const ReadView: React.FC<Props> = ({ erc20, style }) => {
       </h2>
 
       <Accordion>
+        {/* Read account balance for the specified `owner` */}
         <AccordionItem title='Balance'>
           <div>
             <label className='mt-6 font-semibold uppercase text-xs'>Owner</label>
@@ -84,6 +86,7 @@ export const ReadView: React.FC<Props> = ({ erc20, style }) => {
           </div>
         </AccordionItem>
 
+        {/* Read amount which `spender` is still allowed to withdraw from `owner`. */}
         <AccordionItem title='Allowance'>
           <div>
             <label className='font-semibold uppercase text-xs'>Owner</label>

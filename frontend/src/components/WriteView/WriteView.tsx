@@ -38,6 +38,7 @@ export const WriteView: React.FC<Props> = ({ erc20, style }) => {
   return (
     <div style={style}>
       <Accordion>
+        {/* Transfer `value` amount of tokens from the caller's account to account `to`. */}
         <AccordionItem title='Transfer'>
           <div>
             <Label>To</Label>
@@ -82,6 +83,7 @@ export const WriteView: React.FC<Props> = ({ erc20, style }) => {
           </div>
         </AccordionItem>
 
+        {/* Allows `spender` to withdraw from the caller's account multiple times, up to the `value` amount. */}
         <AccordionItem title='Approve'>
           <div>
             <Label>Spender</Label>
@@ -122,6 +124,7 @@ export const WriteView: React.FC<Props> = ({ erc20, style }) => {
           </div>
         </AccordionItem>
 
+        {/* Transfers `value` tokens on the behalf of `from` to the account `to`. */}
         <AccordionItem title='Transfer From'>
           <div>
             <Label>From</Label>

@@ -36,6 +36,7 @@ export const Erc20: React.FC = () => {
             {formatContractName(metadata.contract.name)}
           </h1>
 
+          {/* User Balance */}
           {erc20 && account && (
             <hgroup className='text-right'>
               <h2 className='text-xs uppercase'>Your Balance</h2>
