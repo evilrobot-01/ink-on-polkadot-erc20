@@ -81,6 +81,11 @@ All commands are run from the root of the project, from a terminal:
 
 ## 🚀 Launching
 
+Clone this repository:
+```shell
+git clone https://github.com/evilrobot-01/ink-on-polkadot-erc20
+```
+
 Install dependencies:
 ```shell
 pnpm install
