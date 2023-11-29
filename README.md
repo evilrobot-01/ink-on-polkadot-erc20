@@ -49,8 +49,8 @@ Install `substrate-contracts-node`, a simple [Substrate](https://github.com/pari
 with smart contract functionality via the `contracts` module, downloaded from 
 https://github.com/paritytech/substrate-contracts-node/releases. 
   >  Note: this currently requires a custom build from the 
-  > https://github.com/paritytech/substrate-contracts-node/tree/frank/feat-delayed-finalize branch until PR accepted and 
-  > release made available. It is assumed that the binary is available in the root of the project folder.
+  > https://github.com/paritytech/substrate-contracts-node repository until v0.36 is released. 
+  > It is assumed that the binary is available in the root of the project folder.
 
 ### PNpM
 Install the [pnpm](https://pnpm.io/installation#using-a-standalone-script) package manager.
